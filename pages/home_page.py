@@ -3,8 +3,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
+from pages.base_page import BasePage
 
-class Home_page(Browser):
+class Home_page(BasePage):
     FORGOT_PASSWORD_LINK = (By.XPATH, '//a[@href = "/forgot_password"]')
     FORM_AUTH_LINK = (By.XPATH, '//a[@href = "/login"]')
     INPUTS_LINK = (By.XPATH, '//a[@href = "/inputs"]')

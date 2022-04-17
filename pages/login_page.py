@@ -3,8 +3,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
+from pages.base_page import BasePage
 
-class Login_page(Browser):
+class Login_page(BasePage):
     USERNAME_INPUT = (By.XPATH,'//input[@id="username"]')
     PASS_INPUT = (By.XPATH, '//input[@id="password"]')
     LOGIN_BTN = (By.XPATH, '//button/i[text() =" Login"]')

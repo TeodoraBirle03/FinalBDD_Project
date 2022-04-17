@@ -4,9 +4,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
+from pages.base_page import BasePage
 
-
-class secure_page(Browser, unittest.TestCase):
+class secure_page(BasePage):
     LOGOUT_BTN = (By.XPATH, '//a/i[text() = " Logout"]')
     MESSAGE_SUCCES_BANNER = (By.XPATH, '//div[@id="flash"]')
     # MESSAGE_SUCCES_BANNER = (By.ID, 'flash')

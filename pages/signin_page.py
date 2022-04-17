@@ -3,9 +3,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
+from pages.base_page import BasePage
 
 # fiecare pagina o sa aiba un fisier
-class Sign_in_page(Browser):
+class Sign_in_page(BasePage):
     EMAIL_INPUT = (By.XPATH, '//input[@placeholder="Enter your email"]')
     PASS_INPUT = (By.XPATH, '//input[@placeholder="Enter your password"]')
     LOGIN_BUTTON = (By.XPATH, '//span[text() = "Log in"]/parent::button')
